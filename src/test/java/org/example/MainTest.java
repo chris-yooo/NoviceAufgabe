@@ -37,4 +37,28 @@ class MainTest {
         //then
         assertEquals("chris_yooo", actual);
     }
+
+    @Test
+    public void namePrint5() {
+        //given
+        String name = "chris_yooo";
+
+        //when
+        String actual = Main.namePrint5(name);
+
+        //then
+        assertEquals("chris_yooo\nchris_yooo\nchris_yooo\nchris_yooo\nchris_yooo\n", actual);
+    }
+
+    @Test
+    public void biggerThan0() {
+        //given
+        int number = 0;
+
+        //when
+        boolean actual = Main.isBiggerThan0(number);
+
+        //then
+        assertEquals(false, actual);
+    }
 }
