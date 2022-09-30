@@ -23,6 +23,10 @@ public class Main {
 
 
     public static boolean isBiggerThan0(int number) {
-        return false;
+        return number > 0;
+    }
+
+    public static int square(int number) {
+        return number*number;
     }
 }

@@ -51,7 +51,7 @@ class MainTest {
     }
 
     @Test
-    public void biggerThan0() {
+    public void equals0() {
         //given
         int number = 0;
 
@@ -59,6 +59,43 @@ class MainTest {
         boolean actual = Main.isBiggerThan0(number);
 
         //then
-        assertEquals(false, actual);
+        assertFalse(actual);
+    }
+
+    @Test
+    public void biggerThan0() {
+        //given
+        int number = 3;
+
+        //when
+        boolean actual = Main.isBiggerThan0(number);
+
+        //then
+        assertTrue(actual);
+    }
+
+    @Test
+    public void smallerThan0() {
+        //given
+        int number = -3;
+
+        //when
+        boolean actual = Main.isBiggerThan0(number);
+
+        //then
+        assertFalse(actual);
+    }
+
+    @Test
+    public void square3() {
+        //given
+        int number = 3;
+
+        //when
+        int actual = Main.square(number);
+
+        //then
+        int expected = 9;
+        assertEquals(expected, actual);
     }
 }
