@@ -11,7 +11,6 @@ class MainTest {
         String name = "Christian";
         //when
         String actual = Main.namePrint(name);
-
         //then
         assertEquals("Christian", actual);
     }
@@ -33,7 +32,6 @@ class MainTest {
         String name = "chris_yooo";
         //when
         String actual = Main.namePrint(name);
-
         //then
         assertEquals("chris_yooo", actual);
     }
@@ -42,10 +40,8 @@ class MainTest {
     public void namePrint5() {
         //given
         String name = "chris_yooo";
-
         //when
         String actual = Main.namePrint5(name);
-
         //then
         assertEquals("chris_yooo\nchris_yooo\nchris_yooo\nchris_yooo\nchris_yooo\n", actual);
     }
@@ -54,10 +50,8 @@ class MainTest {
     public void equals0() {
         //given
         int number = 0;
-
         //when
         boolean actual = Main.isBiggerThan0(number);
-
         //then
         assertFalse(actual);
     }
@@ -66,10 +60,8 @@ class MainTest {
     public void biggerThan0() {
         //given
         int number = 3;
-
         //when
         boolean actual = Main.isBiggerThan0(number);
-
         //then
         assertTrue(actual);
     }
@@ -78,10 +70,8 @@ class MainTest {
     public void smallerThan0() {
         //given
         int number = -3;
-
         //when
         boolean actual = Main.isBiggerThan0(number);
-
         //then
         assertFalse(actual);
     }
@@ -90,12 +80,21 @@ class MainTest {
     public void square3() {
         //given
         int number = 3;
-
         //when
         int actual = Main.square(number);
-
         //then
         int expected = 9;
         assertEquals(expected, actual);
     }
+        @Test
+        public void sayHelloChris(){
+                String input = "Christian";
+
+                String actual = Main.sayHello(input);
+
+                assertEquals("Hello Christian",actual);
+        }
 }
+
+
+
